@@ -1,0 +1,22 @@
+version: '2'
+
+
+services:
+  postgres:
+    image: mdillon/postgis:9.5
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: airflow
+    ports:
+      - 5432:5432
+
+  rabbitmq:
+    image: yassineameur/rabbitmq:latest
+    environment:
+      RABBITMQ_USERNAME: airflow
+      RABBITMQ_PASSWORD: airflow
+      RABBITMQ_VHSOT: airflow
+    ports:
+    - 5672:5672
+    - 15672:15672

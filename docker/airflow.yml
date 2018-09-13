@@ -1,0 +1,26 @@
+version: '2'
+
+
+services:
+  webserver:
+    image: airflow
+    restart: always
+    ports:
+    - 8080:8080
+    command: bash -c "airflow initdb && airflow webserver"
+
+  worker:
+    image: airflow
+    environment:
+    - C_FORCE_ROOT=true
+    restart: always
+    depends_on:
+    - webserver
+    command: airflow worker
+
+  scheduler:
+    image: airflow
+    restart: always
+    depends_on:
+    - worker
+    command: airflow scheduler
