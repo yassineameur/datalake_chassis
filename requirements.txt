@@ -51,7 +51,7 @@ httplib2==0.11.3
 idna==2.7
 iso8601==0.1.12
 itsdangerous==0.24
-Jinja2==2.8.1
+Jinja2==2.11.3
 kombu==4.2.1
 lockfile==0.12.2
 lxml==3.8.0
