@@ -67,7 +67,7 @@ pandas==0.23.4
 pandas-gbq==0.6.0
 pendulum==1.4.4
 pipenv==2018.7.1
-protobuf==3.6.1
+protobuf==3.15.0
 psutil==4.4.2
 psycopg2-binary==2.7.5
 pyasn1==0.4.4
